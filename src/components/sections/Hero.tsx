@@ -1,10 +1,39 @@
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 import botLogo from "@/assets/bot-logo.png";
 
 export const Hero = () => {
+  const stageRef = useRef<HTMLDivElement>(null);
+  const mx = useMotionValue(0);
+  const my = useMotionValue(0);
+  const sx = useSpring(mx, { stiffness: 80, damping: 15, mass: 0.5 });
+  const sy = useSpring(my, { stiffness: 80, damping: 15, mass: 0.5 });
+  const logoX = useTransform(sx, (v) => v * 24);
+  const logoY = useTransform(sy, (v) => v * 24);
+  const logoRotY = useTransform(sx, (v) => v * 12);
+  const logoRotX = useTransform(sy, (v) => v * -12);
+  const glowX = useTransform(sx, (v) => v * 14);
+  const glowY = useTransform(sy, (v) => v * 14);
+  const cardAX = useTransform(sx, (v) => v * -16);
+  const cardAY = useTransform(sy, (v) => v * -16);
+  const cardBX = useTransform(sx, (v) => v * 18);
+  const cardBY = useTransform(sy, (v) => v * 18);
+
+  const handleMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const el = stageRef.current;
+    if (!el) return;
+    const r = el.getBoundingClientRect();
+    mx.set((e.clientX - r.left) / r.width - 0.5);
+    my.set((e.clientY - r.top) / r.height - 0.5);
+  };
+  const handleLeave = () => {
+    mx.set(0);
+    my.set(0);
+  };
+
   return (
     <section className="container max-w-6xl pt-10 pb-24 relative">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -70,31 +99,41 @@ export const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative flex items-center justify-center"
         >
-          <div className="relative w-full max-w-md aspect-square">
-            <div className="absolute inset-10 bg-aurora rounded-full blur-3xl opacity-60 animate-pulse-glow" />
-            <div className="absolute inset-0 grid place-items-center">
+          <div
+            ref={stageRef}
+            onMouseMove={handleMove}
+            onMouseLeave={handleLeave}
+            className="relative w-full max-w-md aspect-square"
+            style={{ perspective: 1000 }}
+          >
+            <motion.div
+              className="absolute inset-10 bg-aurora rounded-full blur-3xl opacity-60 animate-pulse-glow will-change-transform"
+              style={{ x: glowX, y: glowY }}
+            />
+            <motion.div
+              className="absolute inset-0 grid place-items-center will-change-transform"
+              style={{ x: logoX, y: logoY, rotateX: logoRotX, rotateY: logoRotY, transformStyle: "preserve-3d" }}
+            >
               <motion.img
                 src={botLogo}
                 alt={siteConfig.bot.name}
                 className="w-3/4 h-3/4 object-contain drop-shadow-[0_30px_60px_hsl(var(--primary)/0.5)]"
-                animate={{ y: [0, -20, 0], rotate: [0, 3, 0] }}
+                animate={{ y: [0, -16, 0] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               />
-            </div>
+            </motion.div>
 
             <motion.div
-              className="absolute top-6 right-4 liquid-glass rounded-2xl px-4 py-3 text-sm"
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute top-6 right-4 liquid-glass rounded-2xl px-4 py-3 text-sm will-change-transform"
+              style={{ x: cardAX, y: cardAY }}
             >
               <div className="text-xs text-muted-foreground">Latency</div>
               <div className="font-display font-bold text-gradient bg-aurora bg-clip-text">42ms</div>
             </motion.div>
 
             <motion.div
-              className="absolute bottom-10 left-0 liquid-glass rounded-2xl px-4 py-3 text-sm"
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              className="absolute bottom-10 left-0 liquid-glass rounded-2xl px-4 py-3 text-sm will-change-transform"
+              style={{ x: cardBX, y: cardBY }}
             >
               <div className="text-xs text-muted-foreground">Commands</div>
               <div className="font-display font-bold text-gradient bg-aurora bg-clip-text">{siteConfig.bot.commands}+</div>
