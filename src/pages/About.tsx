@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { Github, Twitter } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { SplitTextReveal } from "@/components/reactbits/SplitTextReveal";
 
 const About = () => {
   useEffect(() => {
@@ -12,9 +13,11 @@ const About = () => {
     <section className="container max-w-5xl pt-6 pb-20">
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center max-w-2xl mx-auto">
         <span className="text-xs font-semibold uppercase tracking-widest text-primary">About</span>
-        <h1 className="mt-3 font-display font-bold text-5xl md:text-6xl tracking-tight">
-          The team behind <span className="text-gradient bg-aurora bg-clip-text">{siteConfig.bot.name}</span>
-        </h1>
+        <SplitTextReveal
+          as="h1"
+          text={`The team behind ${siteConfig.bot.name}`}
+          className="mt-3 font-display font-bold text-5xl md:text-6xl tracking-tight text-gradient bg-aurora bg-clip-text"
+        />
         <p className="mt-4 text-muted-foreground leading-relaxed">
           We're a small, distributed team obsessed with building tools that feel magical to use.
           {siteConfig.bot.name} started as a weekend project — today it powers communities all over the world.

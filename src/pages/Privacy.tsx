@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { Shield, FileText } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { SplitTextReveal } from "@/components/reactbits/SplitTextReveal";
 
 const Privacy = () => {
   useEffect(() => {
@@ -12,9 +13,11 @@ const Privacy = () => {
     <section className="container max-w-4xl pt-6 pb-20">
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center">
         <span className="text-xs font-semibold uppercase tracking-widest text-primary">Legal</span>
-        <h1 className="mt-3 font-display font-bold text-5xl md:text-6xl tracking-tight">
-          Privacy & <span className="text-gradient bg-aurora bg-clip-text">Terms</span>
-        </h1>
+        <SplitTextReveal
+          as="h1"
+          text="Privacy & Terms"
+          className="mt-3 font-display font-bold text-5xl md:text-6xl tracking-tight text-gradient bg-aurora bg-clip-text"
+        />
         <p className="mt-4 text-muted-foreground">Last updated {siteConfig.privacy.lastUpdated}</p>
       </motion.div>
 

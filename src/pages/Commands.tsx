@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { siteConfig } from "@/config/site";
+import { SplitTextReveal } from "@/components/reactbits/SplitTextReveal";
 
 const Commands = () => {
   const [query, setQuery] = useState("");
@@ -21,9 +22,11 @@ const Commands = () => {
     <section className="container max-w-6xl pt-6 pb-20">
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center max-w-2xl mx-auto">
         <span className="text-xs font-semibold uppercase tracking-widest text-primary">Commands</span>
-        <h1 className="mt-3 font-display font-bold text-5xl md:text-6xl tracking-tight">
-          {siteConfig.bot.commands}+ powerful <span className="text-gradient bg-aurora bg-clip-text">commands</span>
-        </h1>
+        <SplitTextReveal
+          as="h1"
+          text={`${siteConfig.bot.commands}+ powerful commands`}
+          className="mt-3 font-display font-bold text-5xl md:text-6xl tracking-tight text-gradient bg-aurora bg-clip-text"
+        />
         <p className="mt-4 text-muted-foreground">
           Browse every command grouped by category. Search to find what you need.
         </p>
