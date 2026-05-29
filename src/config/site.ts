@@ -3,17 +3,17 @@ import prayagAvatar from "@/assets/prayag-avatar.jpg";
 
 export const siteConfig = {
   bot: {
-    name: "Aerox",
+    name: "Zenith",
     tagline: "The next-generation Discord bot",
     description:
-      "Aerox is an all-in-one Discord bot crafted for modern communities. Moderation, music, fun, utilities — beautifully designed and lightning fast.",
+      "Zenith is an all-in-one Discord bot crafted for modern communities. Moderation, music, fun, utilities — beautifully designed and lightning fast.",
     version: "v3.2.0",
-    servers: "120K+",
-    users: "8.4M+",
+    servers: "40K+",
+    users: "2.4M+",
     commands: 240,
     uptime: "99.99%",
-    inviteUrl: "https://discord.com/oauth2/authorize",
-    supportUrl: "https://discord.gg/aerox",
+    inviteUrl: "https://discord.com/oauth2/authorize?client_id=1501135601037086761&permissions=8&integration_type=0&scope=bot+applications.commands",
+    supportUrl: "https://discord.gg/cSAkdwfUKf",
   },
 
   nav: [
@@ -110,32 +110,32 @@ export const siteConfig = {
 
   team: [
     {
-      name: "AeroX 1",
+      name: "Soul.ly",
       role: "Founder & Lead Developer",
-      bio: "Architects the core. Loves clean code and 3am refactors.",
-      avatar: prayagAvatar,
+      bio: "Architects the core.",
+      avatar: "https://cdn.discordapp.com/attachments/1499502014051389641/1509733713284435988/a4dbf6222365d132483200fbfa616e08.jpg?ex=6a1a4096&is=6a18ef16&hm=17ce1fc0825dc6ec474ea2d8db29889d2075d64a7d0e1133eda5203ff06a0d15&",
       socials: { github: "#", twitter: "#" },
     },
     {
-      name: "AeroX 2",
+      name: "†   𝐏𝐞𝐭𝐞𝐫.𝐬𝐱",
       role: "Product Designer",
       bio: "Crafts the pixels you fall in love with.",
-      avatar: "",
+      avatar: "https://cdn.discordapp.com/attachments/1499502014051389641/1509733713553133659/0bf3855d468221053c0beab81a173eac.jpg?ex=6a1a4096&is=6a18ef16&hm=65555bf03a3c384a7094740e4366c509959c316ac612d52d0cb4bfc7b9debad6&",
       socials: { github: "#", twitter: "#" },
     },
   ],
 
   faqs: [
     {
-      q: "Is Aerox free to use?",
+      q: "Is Zenith free to use?",
       a: "Yes, all core features are completely free. We offer an optional Premium tier for advanced music quality and exclusive customization.",
     },
     {
-      q: "How do I add Aerox to my server?",
+      q: "How do I add Zenith to my server?",
       a: "Click the Invite button anywhere on the site, authorize the bot with the Manage Server permission, and you are ready in seconds.",
     },
     {
-      q: "Does Aerox store my messages?",
+      q: "Does Zenith store my messages?",
       a: "No. We only store configuration data essential for commands. See our Privacy page for full details.",
     },
     {
@@ -150,9 +150,9 @@ export const siteConfig = {
 
   contact: {
     email: "xyz@gmail.com",
-    discord: "https://discord.gg/aerox",
-    github: "https://github.com/AeroXDevs",
-    twitter: "https://twitter.com/nebula_bot",
+    discord: "https://discord.gg/cSAkdwfUKf",
+    github: "https://github.com/kanha-24",
+    twitter: "https://twitter.com/",
   },
 
   socials: [
@@ -187,11 +187,11 @@ export const siteConfig = {
     sections: [
       {
         title: "Acceptable Use",
-        body: "By using Nebula, you agree not to abuse the service, attempt to bypass rate limits, or use the bot for illegal activities. Violations may result in a permanent ban from the service.",
+        body: "By using Zenith, you agree not to abuse the service, attempt to bypass rate limits, or use the bot for illegal activities. Violations may result in a permanent ban from the service.",
       },
       {
         title: "Service Availability",
-        body: "While we target 99.99% uptime, Nebula is provided as-is. We are not liable for service interruptions, data loss, or damages arising from use of the bot.",
+        body: "While we target 99.99% uptime, Zenith is provided as-is. We are not liable for service interruptions, data loss, or damages arising from use of the bot.",
       },
       {
         title: "Changes to These Terms",
