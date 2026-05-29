@@ -8,8 +8,8 @@ export const siteConfig = {
     description:
       "Zenith is an all-in-one Discord bot crafted for modern communities. Moderation, music, fun, utilities — beautifully designed and lightning fast.",
     version: "v3.2.0",
-    servers: "Daily Growing",
-    users: "Early Access",
+    servers: "40k+",
+    users: "2.5M+",
     commands: 240,
     uptime: "99.99%",
     inviteUrl: "https://discord.com/oauth2/authorize?client_id=1501135601037086761&permissions=8&integration_type=0&scope=bot+applications.commands",
@@ -149,7 +149,7 @@ export const siteConfig = {
   ],
 
   contact: {
-    email: "xyz@gmail.com",
+    email: "nexora.devv@gmail.com",
     discord: "https://discord.gg/cSAkdwfUKf",
     github: "https://github.com/kanha-24",
     twitter: "https://twitter.com/",
@@ -158,7 +158,7 @@ export const siteConfig = {
   socials: [
     { icon: Github, href: "#", label: "GitHub" },
     { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Mail, href: "xyz@gmail.com", label: "Email" },
+    { icon: Mail, href: "nexora.devv@gmail.com", label: "Email" },
   ],
 
   privacy: {
