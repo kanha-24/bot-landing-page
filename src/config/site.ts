@@ -8,8 +8,8 @@ export const siteConfig = {
     description:
       "Zenith is an all-in-one Discord bot crafted for modern communities. Moderation, music, fun, utilities — beautifully designed and lightning fast.",
     version: "v3.2.0",
-    servers: "40K+",
-    users: "2.4M+",
+    servers: "Daily Growing",
+    users: "Early Access",
     commands: 240,
     uptime: "99.99%",
     inviteUrl: "https://discord.com/oauth2/authorize?client_id=1501135601037086761&permissions=8&integration_type=0&scope=bot+applications.commands",
