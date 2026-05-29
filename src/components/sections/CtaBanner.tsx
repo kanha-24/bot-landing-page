@@ -19,7 +19,7 @@ export const CtaBanner = () => {
         <div className="relative">
           <SplitTextReveal
             as="h2"
-            text="Ready to upgrade your server?"
+            text="Ready to experience Zenith?"
             className="font-display font-bold text-4xl md:text-5xl tracking-tight"
           />
           <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
