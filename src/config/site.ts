@@ -117,7 +117,7 @@ export const siteConfig = {
       socials: { github: "#", twitter: "#" },
     },
     {
-      name: "†   𝐏𝐞𝐭𝐞𝐫.𝐬𝐱",
+      name: "†   Shubham",
       role: "Product Designer",
       bio: "Crafts the pixels you fall in love with.",
       avatar: "https://cdn.discordapp.com/attachments/1499502014051389641/1509733713553133659/0bf3855d468221053c0beab81a173eac.jpg?ex=6a1a4096&is=6a18ef16&hm=65555bf03a3c384a7094740e4366c509959c316ac612d52d0cb4bfc7b9debad6&",
